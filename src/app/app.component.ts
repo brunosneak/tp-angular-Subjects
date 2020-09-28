@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavService } from './shared/nav.service';
 
 @Component({
   selector: 'app-root',
@@ -6,15 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'tp';
-  navStatus = false;
-
-  showData() {
-    this.navStatus = !this.navStatus;
-    console.log(this.navStatus);
-  }
-
-  closeMyNav() {
-    this.navStatus = true;
-  }
+  constructor(public navService: NavService) {}
 }

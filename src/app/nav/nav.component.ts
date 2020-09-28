@@ -1,22 +1,16 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { NavService } from '../shared/nav.service';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
 })
-export class NavComponent implements OnInit {
-  constructor() {}
-
-  navStatus = false;
-
-  @Output() public sendDataNav: EventEmitter<boolean> = new EventEmitter<
-    boolean
-  >();
+export class NavComponent {
+  constructor(private navService: NavService) {}
 
   toggleNav() {
-    this.sendDataNav.emit(this.navStatus);
+    this.navService.navData = !this.navService.navData;
+    console.log(this.navService.navData);
   }
-
-  ngOnInit(): void {}
 }

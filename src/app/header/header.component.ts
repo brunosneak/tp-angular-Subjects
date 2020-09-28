@@ -1,22 +1,16 @@
-import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { NavService } from '../shared/nav.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
-  constructor() {}
-
-  @Input() public navStatus: boolean = true;
-  @Output() public closeMyNav: EventEmitter<boolean> = new EventEmitter<
-    boolean
-  >();
+export class HeaderComponent {
+  constructor(public navService: NavService) {}
 
   closed() {
-    console.log(this.navStatus);
-    this.closeMyNav.emit(this.navStatus);
+    this.navService.navData = true;
+    console.log(this.navService.navData);
   }
-
-  ngOnInit(): void {}
 }
