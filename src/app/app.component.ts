@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tp';
+  navStatus = false;
+
+  showData() {
+    this.navStatus = !this.navStatus;
+    console.log(this.navStatus);
+  }
+
+  closeMyNav() {
+    this.navStatus = true;
+  }
 }

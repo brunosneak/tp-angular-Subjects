@@ -7,16 +7,9 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    NavComponent,
-    FooterComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, HeaderComponent, NavComponent, FooterComponent],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

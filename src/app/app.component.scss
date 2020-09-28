@@ -2,22 +2,33 @@
   background-color: red;
   display: grid;
   height: 100vh;
+  left: 0;
   grid-template-rows: 10vh auto 10vh;
-  grid-template-columns: 20vh auto;
+  grid-template-columns: 30vh auto;
   grid-template-areas:
     "myHeader myHeader"
     "myNav ."
     "myFooter myFooter";
-}
 
-.myHeader {
-  grid-area: myHeader;
-}
+  .myHeader {
+    grid-area: myHeader;
+  }
 
-.myNav {
-  grid-area: myNav;
-}
+  .myNav {
+    grid-area: myNav;
+  }
 
-.myFooter {
-  grid-area: myFooter;
+  .myFooter {
+    grid-area: myFooter;
+  }
+
+  .navOpen {
+    left: 0;
+    transition: left 0.3s;
+  }
+
+  .navClose {
+    left: -70%;
+    transition: left 0.3s;
+  }
 }

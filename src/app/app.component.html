@@ -1,5 +1,9 @@
 <div class="wrapper">
-  <app-header class="myHeader"></app-header>
-  <app-nav class="myNav"></app-nav>
+  <app-header class="myHeader" (closeMyNav)="closeMyNav()"></app-header>
+  <app-nav
+    class="myNav"
+    [ngClass]="{ navOpen: navStatus === false, navClose: navStatus === true }"
+    (sendDataNav)="showData()"
+  ></app-nav>
   <app-footer class="myFooter"></app-footer>
 </div>
