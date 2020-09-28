@@ -1,0 +1,23 @@
+.wrapper {
+  background-color: red;
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 10vh auto 10vh;
+  grid-template-columns: 20vh auto;
+  grid-template-areas:
+    "myHeader myHeader"
+    "myNav ."
+    "myFooter myFooter";
+}
+
+.myHeader {
+  grid-area: myHeader;
+}
+
+.myNav {
+  grid-area: myNav;
+}
+
+.myFooter {
+  grid-area: myFooter;
+}
