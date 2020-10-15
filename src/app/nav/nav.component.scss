@@ -1,14 +1,15 @@
 :host {
-  background-color: royalblue;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  color: #fff;
-  font-size: 4rem;
-  text-align: center;
-  button {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-  }
+	background-color: royalblue;
+	height: 100%;
+	width: 100%;
+	position: relative;
+	color: #fff;
+	font-size: 4rem;
+	left: 0;
+	text-align: center;
+	button {
+		position: absolute;
+		bottom: 1rem;
+		right: 1rem;
+	}
 }

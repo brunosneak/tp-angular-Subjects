@@ -1,11 +1,11 @@
 <div class="wrapper">
-  <app-header class="myHeader"></app-header>
-  <app-nav
-    class="myNav"
-    [ngClass]="{
-      navOpen: navService.navData === false,
-      navClose: navService.navData === true
-    }"
-  ></app-nav>
-  <app-footer class="myFooter"></app-footer>
+	<app-header class="myHeader"></app-header>
+	<app-nav
+		class="myNav"
+		[ngClass]="{
+			navOpen: navData === false,
+			navClose: navData === true
+		}"
+	></app-nav>
+	<app-footer class="myFooter"></app-footer>
 </div>

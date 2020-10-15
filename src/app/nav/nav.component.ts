@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
-import { NavService } from '../shared/nav.service';
+import { Component } from "@angular/core";
+import { NavService } from "../shared/nav.service";
 
 @Component({
-  selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss'],
+	selector: "app-nav",
+	templateUrl: "./nav.component.html",
+	styleUrls: ["./nav.component.scss"],
 })
 export class NavComponent {
-  constructor(private navService: NavService) {}
+	constructor(private navService: NavService) {}
 
-  toggleNav() {
-    this.navService.navData = !this.navService.navData;
-    console.log(this.navService.navData);
-  }
+	ngOnInit() {}
+
+	toggleNav() {
+		this.navService.toggleNav();
+	}
 }
